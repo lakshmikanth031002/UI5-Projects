@@ -1,0 +1,47 @@
+<mvc:View controllerName="salesorderdetails.controller.SalesOrderSlineData"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="SalesOrderSlineDataPage"
+          title="Sales Order Schedule Line Details"
+          showNavButton="true"
+          navButtonPress="onNavBackPartnerView">
+
+<Table  id="Sline" items="{/VBEP}" mode="SingleSelectLeft">
+    <columns>
+    <Column width="10rem">
+        <Text text="Sales Document Number"/>
+     </Column>
+     <Column>
+        <Text text="Item Number"/>
+     </Column>
+     <Column>
+        <Text text="Schedule LineNo"/>
+     </Column>
+     <Column>
+        <Text text="Schedule Line Category"/>
+     </Column>
+      <Column>
+        <Text text="Item Delivery"/>
+     </Column>
+      <Column>
+        <Text text="Schedule Line Date"/>
+     </Column>
+    </columns>
+    <items>
+        <ColumnListItem >
+        <cells>
+        <Text text="{SalesDocumentNo}"/>
+        <Text text="{ItemNo}"/>
+        <Text text="{ScheduleLineNo}"/>
+        <Text text="{ScheduleLineCategory}"/>
+        <Text text="{ItemDelivery}"/>
+        <Text text="{ScheduleLineDate}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+
+    </Page>
+</mvc:View>

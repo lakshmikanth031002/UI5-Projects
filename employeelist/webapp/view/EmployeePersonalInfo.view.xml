@@ -1,0 +1,69 @@
+<mvc:View controllerName="demo.employeelist.employeelist.controller.EmployeePersonalInfo"
+       	  xmlns:mvc="sap.ui.core.mvc"
+    	  xmlns="sap.m">
+
+    <Page id="EmployeePersonal" title="Employees Personal Details">
+
+<Table  id="productid" items="{FilterEmployeePersonalData>/EmployeePersonalData}" >
+    <columns>
+    <Column width="10rem">
+        <Text text="Employee Name"/>
+     </Column>
+     <Column>
+        <Text text="Date Of Birth"/>
+     </Column>
+     <Column>
+        <Text text="Email"/>
+     </Column>
+	      <Column>
+        <Text text="Phone Number"/>
+     </Column>
+	      <Column>
+        <Text text="Street"/>
+     </Column>
+	      <Column>
+        <Text text="City"/>
+     </Column>
+	      <Column>
+        <Text text="State"/>
+     </Column>
+	      <Column>
+        <Text text="Postal Code"/>
+     </Column>
+	<Column>
+        <Text text="Country"/>
+     </Column>
+     <Column>
+        <Text text="Emergency Contact Person"/>
+     </Column>
+	      <Column>
+        <Text text="RelationShip"/>
+     </Column>
+	      <!-- <Column>
+        <Text text="Emergency phone"/>
+     </Column> -->
+
+
+    </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavProductListPress">
+        <cells>
+      <Text text="{FilterEmployeePersonalData>EmployeeName}"/>
+		<Text text="{FilterEmployeePersonalData>DateOfBirth}"/>
+		<Text text="{FilterEmployeePersonalData>Email}"/>
+		<Text text="{FilterEmployeePersonalData>Phone}"/>
+		<Text text="{FilterEmployeePersonalData>Street}"/>
+		<Text text="{FilterEmployeePersonalData>City}"/>
+		<Text text="{FilterEmployeePersonalData>State}"/>
+		<Text text="{FilterEmployeePersonalData>PostalCode}"/>
+		<Text text="{FilterEmployeePersonalData>Country}"/>
+		<Text text="{FilterEmployeePersonalData>EmergencyContactperson}"/>
+		<Text text="{FilterEmployeePersonalData>Relationship}"/>
+		<!-- <Text text="{Emergencyphone}"/>		 -->
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+	</Page>
+</mvc:View>

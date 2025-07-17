@@ -1,0 +1,117 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "demo.employeelist.employeelist",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.1",
+      "toolsId": "7408ca75-88c5-4fe7-8006-bb1ff663d4ae"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.136.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.uxap": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "demo.employeelist.employeelist.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "demo.employeelist.employeelist.view",
+        "async": true,
+        "viewPath": "demo.employeelist.employeelist.view",
+        "sample": {
+          "stretch": true,
+          "files": [
+            "controller/ObjectPageSubSectionSize.controller.js"
+          ]
+        }
+      },
+      "routes": [
+        {
+          "name": "RouteEmployeeList",
+          "pattern": ":?query:",
+          "target": [
+            "TargetEmployeeList"
+          ]
+        },
+        {
+          "name": "RouteEmployeePersonalInfo",
+          "pattern": "RouteEmployeePersonalInfo/{EmployeeName}",
+          "target": "EmployeePersonalInfoView"
+        }
+      ],
+      "targets": {
+        "TargetEmployeeList": {
+          "id": "EmployeeList",
+          "name": "EmployeeList"
+        },
+        "EmployeePersonalInfoView": {
+          "id": "EmployeePersonalInfo",
+          "name": "EmployeePersonalInfo"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "demo.employeelist.employeelist.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    },
+    "resourceRoots": {
+			"sap.uxap.sample.SharedBlocks": "../SharedBlocks"
+		}
+  }
+}

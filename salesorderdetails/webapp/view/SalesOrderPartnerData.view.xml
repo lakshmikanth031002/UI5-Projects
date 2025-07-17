@@ -1,0 +1,51 @@
+<mvc:View controllerName="salesorderdetails.controller.SalesOrderPartnerData"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="SalesOrderPartnerDataPage" 
+          title="Sales Order Partner Details"
+         showNavButton="true"
+          navButtonPress="onNavBackBusinessView">
+
+<Table  id="Partner" items="{/VBPA}" mode="SingleSelectLeft">
+    <columns>
+    <Column width="10rem">
+        <Text text="Sales Document Number"/>
+     </Column>
+     <Column>
+        <Text text="Item Number"/>
+     </Column>
+     <Column>
+        <Text text="Partner Function"/>
+     </Column>
+     <Column>
+        <Text text="Customer No"/>
+     </Column>
+      <Column>
+        <Text text="Account No of Supplier"/>
+     </Column>
+      <Column>
+        <Text text="Address No"/>
+     </Column>
+    <Column>
+        <Text text="Business PartnerNo"/>
+     </Column>
+    </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavSlineView">
+        <cells>
+        <Text text="{SalesDocumentNo}"/>
+        <Text text="{ItemNo}"/>
+        <Text text="{PartnerFunction}"/>
+        <Text text="{CustomerNo}"/>
+        <Text text="{AccountNoofSupplier}"/>
+        <Text text="{AddressNo}"/>
+        <Text text="{BusinessPartnerNo}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+
+    </Page>
+</mvc:View>

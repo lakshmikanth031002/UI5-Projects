@@ -1,0 +1,20 @@
+<mvc:View controllerName="newassessment.controller.VendorData"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="VendorPage" title="Vendor Details">
+
+    <List headerText="VendorList" id="VendorList" items="{Vendor>/}" >
+        <headerToolbar>
+            <Toolbar>
+                <SearchField width="20%" liveChange="onLiveChangeVendor"/>
+            </Toolbar>
+        </headerToolbar>
+        <items>
+            <StandardListItem  
+                    title="{Vendor>vendorId}"
+                    description="{Vendor>vendorName}"/>
+        </items>
+    </List>
+
+    </Page>
+</mvc:View>

@@ -1,0 +1,51 @@
+<mvc:View controllerName="salesorderdetails.controller.SalesOrderBusinessData"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="SalesOrderBusinessDataPage"
+          title="Sales Order Business Details"
+          showNavButton="true"
+          navButtonPress="onNavBackItemView">
+
+<Table  id="Business" items="{/VBKD}" mode="SingleSelectLeft">
+    <columns>
+    <Column width="10rem">
+        <Text text="Sales Document Number"/>
+     </Column>
+     <Column>
+        <Text text="Item Number"/>
+     </Column>
+     <Column>
+        <Text text="Customer PriceGroup"/>
+     </Column>
+     <Column>
+        <Text text="Customer Group"/>
+     </Column>
+      <Column>
+        <Text text="Sales District"/>
+     </Column>
+      <Column>
+        <Text text="Price ListType"/>
+     </Column>
+    <Column>
+        <Text text="Incoterms"/>
+     </Column>
+    </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavPartnerView">
+        <cells>
+        <Text text="{SalesDocumentNo}"/>
+        <Text text="{ItemNo}"/>
+        <Text text="{CustomerPriceGroup}"/>
+        <Text text="{CustomerGroup}"/>
+        <Text text="{SalesDistrict}"/>
+        <Text text="{PriceListType}"/>
+        <Text text="{Incoterms}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+
+    </Page>
+</mvc:View>

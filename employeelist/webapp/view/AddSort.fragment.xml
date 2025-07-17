@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+<Dialog title="Field Sorting">
+    <f:SimpleForm>
+        <f:content>
+			<ComboBox id="myComboBox" selectionChange="onSelectionChange">
+                <items>
+                    <core:ListItem key="1" text="EmployeeId"/> 
+                    <core:ListItem key="2" text="EmployeeName"/>
+                    <core:ListItem key="3" text="Team"/> 
+                    <core:ListItem key="4" text="EmployeeRole"/>
+                </items>
+			</ComboBox>
+        </f:content>
+    </f:SimpleForm>
+	<RadioButtonGroup id="groupB">
+		<RadioButton id="Asc" text="Ascending" selected="true" />
+		<RadioButton id="Desc" text="Descending" />
+	</RadioButtonGroup>
+
+    <beginButton>
+        <Button text="Ok" press="onOk"/>
+    </beginButton>
+    <endButton>
+        <Button text="Cancel" press="onCancel"/>
+    </endButton>            
+</Dialog>
+</core:FragmentDefinition>

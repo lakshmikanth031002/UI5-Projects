@@ -1,0 +1,65 @@
+{
+
+"VBKD" : [
+
+    {
+        "SalesDocumentNo"    : 1,
+        "ItemNo"             : "10",
+        "CustomerPriceGroup" : "101",
+        "CustomerGroup"      : "201",
+        "SalesDistrict"      : "CENTRE",
+        "PriceListType"      : "31",
+        "Incoterms"          : "FOB"
+    },
+    {
+        "SalesDocumentNo"    : 1,
+        "ItemNo"             : "20",
+        "CustomerPriceGroup" : "102",
+        "CustomerGroup"      : "201",
+        "SalesDistrict"      : "CENTRE",
+        "PriceListType"      : "31",
+        "Incoterms"          : "FOB"
+    },
+    {
+        "SalesDocumentNo"    : 2,
+        "ItemNo"             : "10",
+        "CustomerPriceGroup" : "102",
+        "CustomerGroup"      : "201",
+        "SalesDistrict"      : "CENTRE",
+        "PriceListType"      : "31",
+        "Incoterms"          : "FOB"
+    },
+    {
+        "SalesDocumentNo"    : 2,
+        "ItemNo"             : "20",
+        "CustomerPriceGroup" : "202",
+        "CustomerGroup"      : "201",
+        "SalesDistrict"      : "CENTRE",
+        "PriceListType"      : "31",
+        "Incoterms"          : "FOB"
+    },
+    {
+        "SalesDocumentNo"    : 3,
+        "ItemNo"             : "10",
+        "CustomerPriceGroup" : "102",
+        "CustomerGroup"      : "201",
+        "SalesDistrict"      : "CENTRE",
+        "PriceListType"      : "31",
+        "Incoterms"          : "FOB"
+    },
+    {
+        "SalesDocumentNo"    : 4,
+        "ItemNo"             : "10",
+        "CustomerPriceGroup" : "102",
+        "CustomerGroup"      : "201",
+        "SalesDistrict"      : "CENTRE",
+        "PriceListType"      : "31",
+        "Incoterms"          : "FOB"
+    }
+        
+
+    
+]
+
+
+}

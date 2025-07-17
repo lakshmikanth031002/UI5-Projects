@@ -1,0 +1,66 @@
+<mvc:View controllerName="salesorderdetails.controller.SalesOrderHeader"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="Sales Order Header Details">
+
+     <Table  id="Header" items="{/VBAK}" mode="SingleSelectLeft">
+     	<headerToolbar>
+         <Toolbar>
+            <content>
+            <Title text="Sale Document Number"/>
+            <SearchField width="20%" change="OnChangeEvent" />
+            <!-- <Button icon="sap-icon://sort" press="onSortPress"/>
+            <Button icon="sap-icon://add" press="onAddProductPress"/>
+            <Button icon="sap-icon://edit" press="onEditProductPress"/>
+            <Button icon="sap-icon://sort-ascending" press="onSortAscending"/>
+			<Button icon="sap-icon://sort-descending" press="onSortDescending"/>
+            <Button text="SORT" press="onAddSort"/> -->
+            </content>
+         </Toolbar>
+      </headerToolbar>
+    <columns>
+    <Column width="10rem">
+        <Text text="Sales Document Number"/>
+     </Column>
+     <Column>
+        <Text text="Created On"/>
+     </Column>
+     <Column>
+        <Text text="Sales Document Type"/>
+     </Column>
+     <Column>
+        <Text text="Sales Organization"/>
+     </Column>
+      <Column>
+        <Text text="Distribution Channel"/>
+     </Column>
+      <Column>
+        <Text text="Division"/>
+     </Column>
+           <Column>
+        <Text text="Customer Number"/>
+     </Column>
+     <Column>
+        <Text text="Net Value"/>
+     </Column>
+    </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavItemView">
+        <cells>
+        <Text text="{SalesDocumentNo}"/>
+        <Text text="{CreatedOn}"/>
+        <Text text="{SalesDocumentType}"/>
+        <Text text="{SalesOrganization}"/>
+        <Text text="{DistributionChannel}"/>
+        <Text text="{Division}"/>
+        <Text text="{CustomerNo}"/>
+        <Text text="{NetValue}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+
+    </Page>
+</mvc:View>

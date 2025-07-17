@@ -1,0 +1,54 @@
+<mvc:View controllerName="salesorderdetails.controller.SalesOrderItem"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="SalesOrderItemPage" 
+          title="Sales Order Item Details"
+          showNavButton="true"
+          navButtonPress="onNavBackHeaderView">
+
+<Table  id="Item" items="{/VBAP}" mode="SingleSelectLeft">
+    <columns>
+    <Column width="10rem">
+        <Text text="Sales Document Number"/>
+     </Column>
+     <Column>
+        <Text text="Item Number"/>
+     </Column>
+     <Column>
+        <Text text="Material Number"/>
+     </Column>
+     <Column>
+        <Text text="Plant"/>
+     </Column>
+      <Column>
+        <Text text="Storage Location"/>
+     </Column>
+      <Column>
+        <Text text="Order Quantity"/>
+     </Column>
+     <Column>
+        <Text text="Sales Unit"/>
+     </Column>
+    <Column>
+        <Text text="Net Price"/>
+     </Column>
+    </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavBusinessView">
+        <cells>
+        <Text text="{SalesDocumentNo}"/>
+        <Text text="{ItemNo}"/>
+        <Text text="{MaterialNumber}"/>
+        <Text text="{Plant}"/>
+        <Text text="{StorageLocation}"/>
+        <Text text="{OrderQuantity}"/>
+        <Text text="{SalesUnit}"/>
+        <Text text="{NetPrice}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+    </Page>
+</mvc:View>

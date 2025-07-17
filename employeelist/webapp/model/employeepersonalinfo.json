@@ -1,0 +1,95 @@
+{
+
+"EmployeePersonalData" : [
+    {
+        "EmployeeName" : "Kalyan Kumar",
+        "DateOfBirth": "1992-08-15",
+        "Email": "kalyan.kumar@example.com",
+        "Phone": "9876543210",
+        "Street": "123 Anna Nagar ",
+        "City": "Chennai",
+        "State": "Tamil Nadu",
+        "PostalCode": "600040",
+        "Country": "India",
+        "EmergencyContactperson": "Kavita Kumar",
+        "Relationship": "Spouse",
+        "Emergencyphone": "9876543211"
+    },
+    {
+        "EmployeeName": "Lakshmikanth",
+        "DateOfBirth": "1990-04-22",
+        "Email": "lakshmikanth@example.com",
+        "Phone": "9876543212",
+        "Street": "45 Temple Road",
+        "City": "Kanchipuram",
+        "State": "Tamil Nadu",
+        "PostalCode": "631501",
+        "Country": "India",
+        "EmergencyContactperson": "Priya Lakshmi",
+        "Relationship": "Sister",
+        "Emergencyphone": "9876543213"
+    },
+    {
+        "EmployeeName": "Sam",
+        "DateOfBirth": "1993-11-10",
+        "Email": "sam@example.com",
+        "Phone": "9876543214",
+        "Street": "78 Courtallam Road",
+        "City": "Tenkasi",
+        "State": "Tamil Nadu",
+        "PostalCode": "627811",
+        "Country": "India",
+        "EmergencyContactperson": "John Sam",
+        "Relationship": "Brother",
+        "Emergencyphone": "9876543215" 
+
+    },
+    {
+        "EmployeeName": "Sabarinathan",
+        "DateOfBirth": "1988-07-19",
+        "Email": "sabarinathan@example.com",
+        "Phone": "9876543216",
+        "Street": "56 KK Nagar",
+        "City": "Madurai",
+        "State": "Tamil Nadu",
+        "PostalCode": "625020",
+        "Country": "India",
+        "EmergencyContactperson": "Meena Sabari",
+        "Relationship": "Wife",
+        "Emergencyphone": "9876543217"
+    },
+    {
+        "EmployeeName": "Deepak",
+        "DateOfBirth": "1991-02-25",
+        "Email": "deepak@example.com",
+        "Phone": "9876543218",
+        "Street": "89 Velachery Main Road",
+        "City": "Chennai",
+        "State": "Tamil Nadu",
+        "PostalCode": "600042",
+        "Country": "India",
+        "EmergencyContactperson": "Anita Deepak",
+        "Relationship": "Mother",
+        "Emergencyphone": "9876543219"
+
+    },
+    {
+        "EmployeeName": "Raju",
+        "DateOfBirth": "1994-09-30",
+        "Email": "raju@example.com",
+        "Phone": "9876543220",
+        "Street": "12 Fort Road",
+        "City": "Salem",
+        "State": "Tamil Nadu",
+        "PostalCode": "636001",
+        "Country": "India",
+        "EmergencyContactperson": "Suresh Raju",
+        "Relationship": "Father",
+        "Emergencyphone": "9876543221"
+    }
+
+
+] 
+
+
+}

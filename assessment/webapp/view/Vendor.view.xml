@@ -1,0 +1,69 @@
+<mvc:View controllerName="assessment.controller.Vendor"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+<Page id="VendorPage" title="Vendor Table" 
+                      showNavButton="true" navButtonPress="onNavBackToMaterialView">
+        <Table  id="VendorTable" items="{Vendor>/}">
+            <headerToolbar>
+                <Toolbar>
+                    <!-- <Title text="Value"/> -->
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://add" press="onAddVendorPress"/>
+                    <SearchField width="20%" liveChange="onLiveChangeTable"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Vendor Id"/>
+                </Column>
+                <Column>
+                    <Text text="Vendor Name"/>
+                </Column>
+                <Column>
+                    <Text text="Contact Person"/>
+                </Column>
+                <Column>
+                    <Text text="Email"/>
+                </Column>
+                <Column>
+                    <Text text="Phone"/>
+                </Column>
+                <Column>
+                    <Text text="Lead TimeDays"/>
+                </Column>
+                <Column>
+                    <Text text="LastOrder Date"/>
+                </Column>
+                <Column>
+                    <Text text="Vendor MaterialCode"/>
+                </Column>
+                <Column>
+                    <Text text="IsPreferred"/>
+                </Column>
+                <Column>
+                    <Text text="Min Order Quantity"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavigationToVendorAddress">
+        <cells>
+        <Text text="{Vendor>vendorId}"/>
+        <Text text="{Vendor>vendorName}"/>
+        <Text text="{Vendor>contactPerson}"/>
+        <Text text="{Vendor>email}"/>
+        <Text text="{Vendor>phone}"/>
+        <Text text="{Vendor>leadTimeDays}"/>
+        <Text text="{Vendor>lastOrderDate}"/>
+        <Text text="{Vendor>vendorMaterialCode}"/>
+        <Text text="{Vendor>isPreferred}"/>
+        <Text text="{Vendor>minOrderQuantity}"/>
+
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+</Page>
+
+</mvc:View>

@@ -1,0 +1,46 @@
+<mvc:View controllerName="demo.employeelist.employeelist.controller.EmployeeList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+		 <Toolbar>
+            <content>
+			<!-- <Title text="Employee Id"/> -->
+			<!-- <ToolbarSpacer/> -->
+			<!-- <SearchField width="20%" liveChange="onSearchEmployeeId"/>  -->
+			<!-- <SearchField width="20%" change="OnChangeEvent" /> -->
+
+            <Title text="Employee Name"/>
+            <SearchField width="20%" liveChange="onSearchEmployeeName"/> 
+			<!-- <SearchField width="20%" change="OnChangeEventEmployeeName" /> -->
+
+            <Title text="Location"/>
+            <!-- <SearchField width="20%" liveChange="onSearchEmployeeLocation"/>  -->
+			<SearchField width="20%" change="OnChangeEventEmployeeLocation" />
+
+			<Button icon="sap-icon://sort-ascending" press="onSortAscending"/>
+			<Button icon="sap-icon://sort-descending" press="onSortDescending"/>
+			<Button text="SORT" press="onAddSort"/>
+			<Button icon="sap-icon://add-employee" press="onAddEmployeePress"/>
+			<Button icon="sap-icon://edit" press="onEditEmployee"/>
+			<Button icon="sap-icon://delete" press="onDeleteEmployee"/>
+          
+            </content>
+
+         </Toolbar>
+
+		<!-- headerText="Employees" -->
+		<!-- headerLevel="H2" -->
+
+    <List id="ListId" items="{ path: 'Employee>/EmployeeList'}" 
+	      mode="SingleSelectLeft" >
+
+		<StandardListItem 
+		    counter="{Employee>EmployeeId}"
+			title="{Employee>EmployeeName} "
+			icon="sap-icon://employee"
+		    description="Team - {Employee>Team} , Role - {Employee>EmployeeRole}"
+			type="Navigation" press="onNavEmployeePersonalInfo"/>
+	</List>
+
+    </Page>
+</mvc:View>

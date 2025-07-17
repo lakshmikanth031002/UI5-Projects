@@ -1,0 +1,64 @@
+{
+    "VBAP": [
+      {
+        "SalesDocumentNo": 1,
+        "ItemNo": "10",
+        "MaterialNo": "300003",
+        "Plant": "RE01",
+        "StorageLocation": "1",
+        "OrderQuantity": "100.00",
+        "SalesUnit": "EA",
+        "NetPrice": "10000"
+      },
+      {
+        "SalesDocumentNo": 1,
+        "ItemNo": "20",
+        "MaterialNo": "300003",
+        "Plant": "RE01",
+        "StorageLocation": "1",
+        "OrderQuantity": "100.00",
+        "SalesUnit": "EA",
+        "NetPrice": "10000"
+      },
+      {
+        "SalesDocumentNo": 2,
+        "ItemNo": "10",
+        "MaterialNo": "300003",
+        "Plant": "RE01",
+        "StorageLocation": "1",
+        "OrderQuantity": "100.00",
+        "SalesUnit": "EA",
+        "NetPrice": "10000"
+      },
+      {
+        "SalesDocumentNo": 2,
+        "ItemNo": "20",
+        "MaterialNo": "300003",
+        "Plant": "RE01",
+        "StorageLocation": "1",
+        "OrderQuantity": "100.00",
+        "SalesUnit": "EA",
+        "NetPrice": "10000"
+      },
+      {
+        "SalesDocumentNo": 3,
+        "ItemNo": "10",
+        "MaterialNo": "300003",
+        "Plant": "RE01",
+        "StorageLocation": "1",
+        "OrderQuantity": "100.00",
+        "SalesUnit": "EA",
+        "NetPrice": "10000"
+      },
+      {
+        "SalesDocumentNo": 3,
+        "ItemNo": "10",
+        "MaterialNo": "300003",
+        "Plant": "RE01",
+        "StorageLocation": "1",
+        "OrderQuantity": "100.00",
+        "SalesUnit": "EA",
+        "NetPrice": "10000"
+      }
+    ]
+  }

@@ -1,0 +1,54 @@
+{
+    "EmployeeList": [
+      { 
+        "EmployeeId": 1,
+        "EmployeeName": "Kalyan Kumar", 
+        "Team": "Technical",
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Chennai"
+      },
+      { 
+        "EmployeeId": 2,
+        "EmployeeName": "Lakshmikanth", 
+        "Team": "Technical",
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Kanchipuram"
+      },
+      {
+         "EmployeeId": 3,
+        "EmployeeName": "Sam",
+        "Team": "Technical", 
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Tenkasi"
+      },
+      { 
+        "EmployeeId": 4,
+        "EmployeeName": "Sabarinathan", 
+        "Team": "Technical",
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Madhurai"
+      },
+      { 
+        "EmployeeId": 5,
+        "EmployeeName": "Deepak", 
+        "Team": "Technical",
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Chennai"
+      },
+      { 
+        "EmployeeId": 6,
+        "EmployeeName": "Raju", 
+        "Team": "Technical",
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Selam"
+      },
+      { 
+        "EmployeeId": 7,
+        "EmployeeName": "Pradeesh kumar",
+        "Team": "Technical",
+        "EmployeeRole": "Associate SAP-ABAP Consultant",
+        "Location" : "Chengalpattu"
+      }
+
+    ]
+  }

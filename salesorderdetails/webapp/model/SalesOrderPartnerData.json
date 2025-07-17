@@ -1,0 +1,65 @@
+{
+
+"VBPA" : [
+
+    {
+        "SalesDocumentNo"     : 1,
+        "ItemNo"              : "10",
+        "PartnerFunction"     : "AG",
+        "CustomerNo"          : "1000001",
+        "AccountNoofSupplier" : "ENGINE",
+        "AddressNo"           : "117",
+        "BusinessPartnerNo"   : "1000001"
+    },
+    {
+        "SalesDocumentNo"     : 1,
+        "ItemNo"              : "10",
+        "PartnerFunction"     : "RE",
+        "CustomerNo"          : "1000001",
+        "AccountNoofSupplier" : "ENGINE",
+        "AddressNo"           : "117",
+        "BusinessPartnerNo"   : "1000001"
+    },
+    {
+        "SalesDocumentNo"     : 1,
+        "ItemNo"              : "10",
+        "PartnerFunction"     : "RG",
+        "CustomerNo"          : "1000001",
+        "AccountNoofSupplier" : "ENGINE",
+        "AddressNo"           : "117",
+        "BusinessPartnerNo"   : "1000001"
+    },
+    {
+        "SalesDocumentNo"     : 2,
+        "ItemNo"              : "10",
+        "PartnerFunction"     : "AG",
+        "CustomerNo"          : "1000002",
+        "AccountNoofSupplier" : "ENGINE",
+        "AddressNo"           : "117",
+        "BusinessPartnerNo"   : "1000001"
+    },
+    {
+        "SalesDocumentNo"     : 2,
+        "ItemNo"              : "10",
+        "PartnerFunction"     : "RE",
+        "CustomerNo"          : "1000002",
+        "AccountNoofSupplier" : "ENGINE",
+        "AddressNo"           : "117",
+        "BusinessPartnerNo"   : "1000001"
+    },
+    {
+        "SalesDocumentNo"     : 2,
+        "ItemNo"              : "10",
+        "PartnerFunction"     : "RG",
+        "CustomerNo"          : "1000002",
+        "AccountNoofSupplier" : "ENGINE",
+        "AddressNo"           : "117",
+        "BusinessPartnerNo"   : "1000001"
+    }
+    
+        
+
+]
+
+
+}

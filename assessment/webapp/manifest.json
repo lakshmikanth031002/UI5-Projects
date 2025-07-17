@@ -1,0 +1,121 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "assessment",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.2",
+      "toolsId": "c1d50f19-d6d7-44a3-8a4c-b671532a1276"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.138.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "assessment.i18n.i18n"
+        }
+      },
+      "MaterialValue" : {
+        "type" : "sap.ui.model.json.JSONModel",
+        "uri" : "model/Material.json"
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "assessment.view",
+        "async": true,
+        "viewPath": "assessment.view"
+      },
+      "routes": [
+        {
+          "name": "RouteMaterial",
+          "pattern": ":?query:",
+          "target": [
+            "TargetMaterial"
+          ]
+        },
+        {
+          "name": "RouteVendor",
+          "pattern": "RouteVendor/{MaterialId}",
+          "target": "TargetVendor"
+        },
+        {
+          "name": "RouteVendorAddress",
+          "pattern": "RouteVendorAddress/{MaterialId}/{VendorId}",
+          "target": "TargetVendorAddress"
+        }
+      ],
+      "targets": {
+        "TargetMaterial": {
+          "id": "Material",
+          "name": "Material"
+        },
+        "TargetVendor": {
+          "id": "Vendor",
+          "name": "Vendor"
+        },
+        "TargetVendorAddress": {
+          "id": "VendorAddress",
+          "name": "VendorAddress" 
+        }
+
+      }
+    },
+    "rootView": {
+      "viewName": "assessment.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

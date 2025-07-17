@@ -1,0 +1,39 @@
+<mvc:View controllerName="newassessment.controller.MaterialData"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="MaterialPage" title="Material Details">
+
+        <Table  id="MateiralTable" items="{MaterialValue>/}">
+            <headerToolbar>
+                <Toolbar>
+                    <SearchField width="20%" liveChange="onLiveChangeMaterial"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Material Id"/>
+                </Column>
+                <Column>
+                    <Text text="Material Name"/>
+                </Column>
+                <Column>
+                    <Text text="Description"/>
+                </Column>
+                <Column>
+                    <Text text="Unit Of Mesasure"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavigationToVendor">
+        <cells>
+        <Text text="{MaterialValue>materialId}"/>
+        <Text text="{MaterialValue>materialName}"/>
+        <Text text="{MaterialValue>description}"/>
+        <Text text="{MaterialValue>unitOfMeasure}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+    </Page>
+</mvc:View>

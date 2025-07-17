@@ -1,0 +1,32 @@
+{
+
+    "EmployeeData" : [
+
+        {
+            "EmployeeName" : "Lakshmikanth",
+            "EmployeeLocation" : "Chennai"
+        },
+        {
+            "EmployeeName" : "Saravanakumar",
+            "EmployeeLocation" : "Tenkasi"
+        },
+        {
+            "EmployeeName" : "Esakkinathan",
+            "EmployeeLocation" : "Madhurai"
+        },
+        {
+            "EmployeeName" : "Rahul",
+            "EmployeeLocation" : "Kanchipuram"
+        },
+        {
+            "EmployeeName" : "Sanjay",
+            "EmployeeLocation" : "Chengalpattu"
+        },
+        {
+            "EmployeeName" : "Ravi",
+            "EmployeeLocation" : "Thirunelveli"
+        }
+
+    ]
+
+}

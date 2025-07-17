@@ -1,0 +1,78 @@
+<mvc:View xmlns:tnt="sap.tnt" controllerName="assessment.controller.Material"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="Material Table">
+        <Table  id="MaterialTable" items="{MaterialValue>/}" mode="SingleSelectLeft">
+            <headerToolbar>,
+                <Toolbar>
+                    <Title text="Material Name" class="newcolor"/>
+                    <SearchField width="20%" liveChange="onLiveChangeTable"/>
+                    <!-- <SearchField width="20%" change="onChangeTable"/> -->
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://add" press="onAddMaterialPress"/>
+                    <Button text="SORT" press="onAddSort"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Material Id"/>
+                </Column>
+                <Column>
+                    <Text text="Material Name"/>
+                </Column>
+                <Column>
+                    <Text text="Description"/>
+                </Column>
+                <Column>
+                    <Text text="Unit Of Mesasure"/>
+                </Column>
+                <Column>
+                    <Text text="Category"/>
+                </Column>
+                <Column>
+                    <Text text="Current Stock"/>
+                </Column>
+                <Column>
+                    <Text text="Min StockLevel"/>
+                </Column>
+                <Column>
+                    <Text text="Max StockLevel"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem type="Navigation" press="onNavigationToVendor">
+        <cells>
+        <Text text="{MaterialValue>materialId}"/>
+        <Text text="{MaterialValue>materialName}"/>
+        <Text text="{MaterialValue>description}"/>
+        <Text text="{MaterialValue>unitOfMeasure}"/>
+        <Text text="{MaterialValue>category}"/>
+        <Text text="{MaterialValue>currentStock}"/>
+        <Text text="{MaterialValue>minStockLevel}"/>
+        <Text text="{MaterialValue>maxStockLevel}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+    <!-- <List id="VendorList" mode="SingleSelectLeft"
+          items="{MaterialValue>/VendorData}"
+          headerLevel="H2"
+          headerText="Vendor List">
+    <headerToolbar>
+        <Toolbar>
+            <SearchField width="20%" liveChange="onLiveChangeList" />
+        </Toolbar>
+    </headerToolbar>
+    <items>
+		<StandardListItem 
+		    title="{MaterialValue>vendor_name}"
+			icon="sap-icon://employee"
+		    description="Contact Person - {MaterialValue>contact_person} , Number - {MaterialValue>contact_number}"
+			/>
+	</items>
+    </List>  -->
+
+    </Page>
+</mvc:View>

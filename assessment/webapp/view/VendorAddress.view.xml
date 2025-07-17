@@ -1,0 +1,50 @@
+<mvc:View xmlns:tnt="sap.tnt" controllerName="assessment.controller.VendorAddress"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="VendorAddressPage" title="Vendor Address" 
+          showNavButton="true" 
+          navButtonPress="onNavBackToVendorView">
+
+        <Table  id="VendorAddressTable" items="{VendorAddress>/}">
+            <columns>
+                <Column>
+                    <Text text="Street"/>
+                </Column>
+                <Column>
+                    <Text text="City"/>
+                </Column>
+                <Column>
+                    <Text text="State"/>
+                </Column>
+                <Column>
+                    <Text text="ZipCode"/>
+                </Column>
+                <Column>
+                    <Text text="Country"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem>
+        <cells>
+        <Text text="{VendorAddress>street}"/>
+        <Text text="{VendorAddress>city}"/>
+        <Text text="{VendorAddress>state}"/>
+        <Text text="{VendorAddress>zipCode}"/>
+        <Text text="{VendorAddress>country}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+
+
+        <!-- <List id="VendorList" items="{ path : 'Vendor>/'}"
+              headerText="Vendor Details"
+              headerLevel="H2">
+		<StandardListItem 
+			title="Vendor Name:{Vendor>vendorId}"/>
+	    </List> -->
+
+
+    </Page>
+</mvc:View>

@@ -1,0 +1,35 @@
+{
+
+"VBEP" : [
+
+    {
+        "SalesDocumentNo"      : 1,
+        "ItemNo"               : "10",
+        "ScheduleLineNo"       : "1",
+        "ScheduleLineCategory" : "CN",
+        "ItemDelivery"         : "X",
+        "ScheduleLineDate"     : "2025-06-21"
+    },
+    {
+        "SalesDocumentNo"      : 1,
+        "ItemNo"               : "10",
+        "ScheduleLineNo"       : "2",
+        "ScheduleLineCategory" : "CN",
+        "ItemDelivery"         : "X",
+        "ScheduleLineDate"     : "2025-06-21"
+    },
+    {
+        "SalesDocumentNo"      : 1,
+        "ItemNo"               : "10",
+        "ScheduleLineNo"       : "3",
+        "ScheduleLineCategory" : "CN",
+        "ItemDelivery"         : "X",
+        "ScheduleLineDate"     : "2025-06-21"
+    }
+        
+
+
+]
+
+
+}
