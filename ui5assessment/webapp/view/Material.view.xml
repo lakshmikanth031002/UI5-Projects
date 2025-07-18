@@ -1,9 +1,0 @@
-<mvc:View controllerName="ui5assessment.controller.Material"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page1" title="Material Table">
-
-
-
-    </Page>
-</mvc:View>

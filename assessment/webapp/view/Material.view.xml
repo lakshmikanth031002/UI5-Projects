@@ -2,20 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page1" title="Material Table">
-    
-    <Button text="push"/>
-        <!-- <Table> -->
-            <!-- <headerToolbar>, -->
-                <!-- <Toolbar> -->
-                    <!-- <Title text="Material Name" class="newcolor"/> -->
-                    <!-- <SearchField width="20%" liveChange="onLiveChangeTable"/> -->
+
+        <Table id="MaterialTable" items="{MaterialValue>/}"> 
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="Material Name" class="newcolor"/>
+                    <SearchField width="20%" liveChange="onLiveChangeTable"/>
                     <!-- <SearchField width="20%" change="onChangeTable"/> -->
-                    <!-- <ToolbarSpacer/> -->
-                    <!-- <Button icon="sap-icon://add" press="onAddMaterialPress"/> -->
-                    <!-- <Button text="SORT" press="onAddSort"/> -->
-                <!-- </Toolbar> -->
-            <!-- </headerToolbar> -->
-            <!-- <columns>
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://add" press="onAddMaterialPress"/>
+                    <Button text="SORT" press="onAddSort"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
                 <Column>
                     <Text text="Material Id"/>
                 </Column>
@@ -55,7 +54,7 @@
         </cells>
         </ColumnListItem>
     </items>
-    </Table> -->
+    </Table>
 
 
     <!-- <List id="VendorList" mode="SingleSelectLeft"
