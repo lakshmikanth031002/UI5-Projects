@@ -1,0 +1,54 @@
+<mvc:View xmlns:tnt="sap.tnt" controllerName="assessment.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="LoginPage" title="Login Page">
+
+            <content>
+            <VBox
+                justifyContent="Center"
+                alignItems="Center"
+                class="w3-padding-large"
+                width="400px">
+                <!-- Company Logo -->
+                <Image
+                    src="https://www.marketing91.com/wp-content/uploads/2019/07/Importance-of-Corporate-Image.jpg"
+                    width="150px"
+                    height="150px"
+                    class="w3-margin-bottom w3-animate-zoom"/>
+                <!-- Title -->
+                <Text
+                    text="Welcome to MyApp"
+                    class="w3-xlarge w3-margin-bottom w3-text-black w3-animate-fadeInUp"/>
+                <!-- Username Input -->
+                <Input
+                    id="username"
+                    placeholder="Enter Username"
+                    width="80%"
+                    class="w3-margin-bottom"/>
+                <!-- Password Input -->
+                <Input
+                    id="password"
+                    type="Password"
+                    placeholder="Enter Password"
+                    width="80%"
+                    class="w3-margin-bottom"/>
+                <!-- Login Button -->
+                <Button
+                    text="Login"
+                    type="Emphasized"
+                    press=".onLoginPress"
+                    width="100%"
+                    class="w3-button w3-blue w3-round-large w3-margin-bottom"/>
+                <!-- Optional Link -->
+                <Link
+                    text="Forgot Password?"
+                    press=".onForgotPassword"
+                    class="w3-margin-bottom"/>
+            </VBox>
+        </content>
+
+    </Page>
+
+
+</mvc:View>

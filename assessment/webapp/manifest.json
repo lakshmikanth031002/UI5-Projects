@@ -78,8 +78,15 @@
       },
       "routes": [
         {
-          "name": "RouteMaterial",
+          "name": "RouteLogin",
           "pattern": ":?query:",
+          "target": [
+            "TargetLogin"
+          ]
+        },
+        {
+          "name": "RouteMaterial",
+          "pattern": "RouteMaterial",
           "target": [
             "TargetMaterial"
           ]
@@ -96,6 +103,10 @@
         }
       ],
       "targets": {
+        "TargetLogin" : {
+          "id": "Login",
+          "name": "Login"
+        },
         "TargetMaterial": {
           "id": "Material",
           "name": "Material"
