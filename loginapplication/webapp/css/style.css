@@ -1,0 +1,78 @@
+/* Enter your custom styles here */
+html, body, .sapUiBody {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.loginContainer {
+    height: 100%;
+    width: 100%;
+}
+.imagePane {
+    background-color: #f0f0f0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginPane {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.loginForm {
+    width: 80%;
+    max-width: 400px;
+}
+.fullHeightImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tittle {
+color: red ;
+font-family: fantasy;
+}
+
+/* hide the scroll bar and split bar */
+.loginContainer .sapUiLoSplitterBar {
+    display: none !important;
+    width: 0 !important;
+}
+.imagePane, .loginPane {
+    overflow: hidden;
+} 
+/* hide the scroll bar and split bar */
+
+.mainContent {
+    width: 100%;
+}
+
+#userMenuPopover {
+    padding: 10px;
+}
+
+#userMenuPopover .sapMBtn {
+    width: 100%;
+    text-align: left;
+}
+.customComboBox .sapMComboBoxBase {
+    box-shadow: none !important;
+    border: none !important;
+}
+.customComboBox .sapMComboBoxBaseInner {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+.customComboBox .sapMComboBoxArrow {
+    display: none !important;
+}
+.customComboBox .sapMInputIcon {
+    display: none !important;
+}
+.customComboBox .sapMComboBoxBaseInner {
+    padding-right: 0 !important;
+}

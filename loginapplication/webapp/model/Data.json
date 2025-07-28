@@ -1,0 +1,20 @@
+{
+
+"LoginData" : [
+{
+    "EmailId" : "lakshmi@gmail.com",
+    "Password" : "11111"
+},
+{
+    "EmailId" : "karan@gmail.com",
+    "Password" : "22222"
+},
+{
+    "EmailId" : "kanth@gmail.com",
+    "Password" : "33333"
+}
+
+
+]    
+
+}

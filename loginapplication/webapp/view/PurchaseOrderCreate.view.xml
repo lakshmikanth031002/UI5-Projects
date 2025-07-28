@@ -1,0 +1,188 @@
+<mvc:View xmlns:core="sap.ui.core" 
+    controllerName="loginapplication.controller.PurchaseOrderCreate"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap"
+    xmlns:info="loginapplication.SharedBlocks.Info.Info"
+    xmlns="sap.m">
+    <Shell>
+    <App>
+        <pages>
+            <Page title="Royal Enfield" showNavButton="false">
+                    <!-- Top Navigation Bar -->
+                <customHeader>
+                    <Bar>
+                        <contentLeft>
+                            <Image src="https://cdnmedia.endeavorsuite.com/images/showcase/productOwner_colorLogos/powersports/royal_enfield.png" width="150px" height="35px"/>
+                        </contentLeft>
+                        <contentMiddle>
+                            <Button class="buttoncolor" text="Home" type="Transparent" press="onNavPress"/>
+                        </contentMiddle>
+                        <contentRight>
+                            <Button icon="sap-icon://question-mark" type="Transparent" press="onUserMenuPress"/>
+                            <Button icon="sap-icon://headset" type="Transparent" press="onUserMenuPress"/>
+                        <MenuButton icon="sap-icon://person-placeholder">
+				            <Menu>
+                                <MenuItem text="test UKTC" press="onPress"/>
+					            <MenuItem text="Settings" icon="sap-icon://action-settings" press="onPress"/>
+					            <MenuItem text="About" icon="sap-icon://high-priority" press="onPress" />
+					            <MenuItem text="Sign Out" icon="sap-icon://log" press="onPress" />
+				            </Menu>
+		                </MenuButton>
+                        </contentRight>
+                    </Bar>
+                </customHeader>
+ <uxap:ObjectPageLayout showTitleInHeaderContent="true">
+    <uxap:headerTitle>
+        <uxap:ObjectPageDynamicHeaderTitle>
+            <uxap:expandedHeading>
+                <Title level="H1" text="Create New Purhcase Order :3500094 Motorcycles Ltd"/>
+            </uxap:expandedHeading>
+        </uxap:ObjectPageDynamicHeaderTitle>
+    </uxap:headerTitle> 
+    <!-- <uxap:headerContent>
+        <Label text="Hello Boys!"/>
+    </uxap:headerContent> -->
+
+    <uxap:sections>
+            <uxap:ObjectPageSection titleLevel="H6" title="INFO" titleUppercase="false">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection>
+                            <uxap:blocks>
+                                <!-- <VBox> -->
+                                    <!-- <HBox>
+                                        <Label text="Purchase Type:" textAlign="Left"/>
+                                        <Select selectedKey="Vehicle">
+                                            <core:Item key="Vehicle" text="Vehicle"/>
+                                            <core:Item key="SparePart" text="Spare Part"/>
+                                        </Select>
+                                        <Label text="Payment Type:"/>
+                                        <Select selectedKey="OrderWF">
+                                            <core:Item key="OrderWF" text="Order using WF ..."/>
+                                            <core:Item key="Cash" text="Cash"/>
+                                        </Select>
+                                        <Label text="Credit Limit:"/>
+                                        <Input value="0.00" enabled="false"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Label text="Ship To Party:"/>
+                                        <Select selectedKey="AMMotorcycle">
+                                            <core:Item key="AMMotorcycle"/>
+                                            <core:Item key="OtherParty" text="Other Party"/>
+                                        </Select>
+                                        <Label text="Dealer Ref No:*"/>
+                                        <Input placeholder="Enter Dealer Ref No"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Label text="Address:"/>
+                                        <Text text="1, Diamond Industrial Centre, Work Letchworth Garden City SG6 1LW"/>
+                                        <Label text="PO Ref Date:"/>
+                                        <DatePicker valueFormat="dd/MM/yyyy" displayFormat="dd/MM/yyyy"/>
+                                        <Label text="Balance Credit:"/>
+                                        <Input value="0.00" enabled="false"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Label text="Total Order Quantity:"/>
+                                        <Input value="0" enabled="false"/>
+                                        <Label text="Price:"/>
+                                        <Input placeholder="Enter Price"/>
+                                        <CheckBox text="Enable Unit" selected="false"/>
+                                    </HBox> -->
+                                <!-- </VBox> -->
+                            <HBox>
+                                <VBox>
+                                    <HBox>
+                                        <Label text="Purchase Type:" textAlign="Left" width="100pX"/>
+                                        <Select selectedKey="Vehicle" width="200px">
+                                            <core:Item key="Vehicle" text="Vehicle"/>
+                                            <core:Item key="SparePart" text="Spare Part"/>
+                                        </Select>
+                                        <Label text="Payment Type:" width="100pX"/>
+                                        <Select selectedKey="OrderWF" width="200px">
+                                            <core:Item key="OrderWF" text="Order using WF ..."/>
+                                            <core:Item key="Cash" text="Cash"/>
+                                        </Select>
+                                        <Label text="Credit Limit:" width="100pX"/>
+                                        <Input width="100px"/>
+                                        <Label text="Total Order:" width="100pX"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Label text="Ship To Party:" width="100pX"/>
+                                        <Select selectedKey="AMMotorcycle" width="200px">
+                                            <core:Item key="AMMotorcycle"/>
+                                            <core:Item key="OtherParty" text="Other Party"/>
+                                        </Select>
+                                        <Label text="Dealer Ref No:" width="100pX"/>
+                                        <Input placeholder="Enter Dealer Ref No" width="200px"/>
+                                        <Label text="Enable Unit Price:" width="100pX"/>
+                                    </HBox>
+                                    <HBox>
+                                        <Label text="Address:" width="100pX"/>
+                                        <Text text="1, Diamond Industrial Centre, Work Letchworth Garden City SG6 1LW" width="200px"/>
+                                        <Label text="PO Ref Date:" width="100px"/>
+                                        <DatePicker placeholder="e.g. 31/12/2025" width="200px" valueFormat="dd/MM/yyyy" displayFormat="dd/MM/yyyy"/>
+                                        <Label text="Balance Credit:" width="100pX"/>
+                                    </HBox>
+                                </VBox>
+                            </HBox>
+
+                            <HBox>
+
+                            </HBox>
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection title="SEQ" titleUppercase="false" >
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection title="SEQ">
+                            <uxap:blocks>
+                                <Table id="EmployeeTable">
+                                    <columns>
+                                    <Column>
+                                        <Text text="Seq"/>
+                                    </Column>
+                                    <Column>
+                                        <Text text="Material"/>
+                                    </Column>
+                                    <Column>
+                                        <Text text="Quantity"/>
+                                    </Column>
+                                    <Column>
+                                        <Text text="In Stock"/>
+                                    </Column>
+                                    <Column>
+                                        <Text text="ETA"/>
+                                    </Column>
+                                    <Column>
+                                        <Text text="MSRP"/>
+                                    </Column>
+                                    </columns>
+                                    <items>
+                                        <ColumnListItem >
+                                            <cells>
+                                                <Text text="{}"/>
+                                                <Text text="{}"/>
+                                                <Text text="{}"/>
+                                                <Text text="{}"/> 
+                                            </cells>
+                                        </ColumnListItem>
+                                    </items>
+                                </Table>
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+</uxap:ObjectPageLayout>
+
+                </Page>
+            </pages>
+        </App>
+    </Shell>    
+
+
+
+    
+</mvc:View>

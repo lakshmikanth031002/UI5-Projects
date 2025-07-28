@@ -1,0 +1,66 @@
+<mvc:View controllerName="project1.controller.EmployeeData"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <!-- <List items="{/Employees}">
+        <items>
+            <StandardListItem title="{FirstName} {LastName}" description="{Title}"/>
+        </items>
+    </List> -->
+            <Table id="EmployeeTable" items="{EmployeeData>/results}"> 
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="Material Name" class="newcolor"/>
+                    <!-- <SearchField width="20%" liveChange="onLiveChangeTable"/> -->
+                    <SearchField width="20%" change="onChangeTable"/>
+                    <!-- <ToolbarSpacer/> -->
+                    <!-- <Button icon="sap-icon://add" press="onAddMaterialPress"/> -->
+                    <Button text="SORT" press="onAddSort"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Employee Id"/>
+                </Column>
+                <Column>
+                    <Text text="First Name"/>
+                </Column>
+                <Column>
+                    <Text text="Last Name"/>
+                </Column>
+                <Column>
+                    <Text text="Birth Data"/>
+                </Column>
+                <Column>
+                    <Text text="Title"/>
+                </Column>
+                <Column>
+                    <Text text="City"/>
+                </Column>
+                <Column>
+                    <Text text="Postal Code"/>
+                </Column>
+                <Column>
+                    <Text text="Country"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem >
+        <cells>
+        <Text text="{EmployeeData>EmployeeID}"/>
+        <Text text="{EmployeeData>FirstName}"/>
+        <Text text="{EmployeeData>LastName}"/>
+        <!-- <Text text="{EmployeeData>BirthDate}"/> -->
+        <Text text="{ path: 'EmployeeData>BirthDate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
+        <Text text="{EmployeeData>Title}"/>
+        <Text text="{EmployeeData>City}"/>
+        <Text text="{EmployeeData>PostalCode}"/>
+         <Text text="{EmployeeData>Country}"/>
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+    </Page>
+</mvc:View>

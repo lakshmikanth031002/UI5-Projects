@@ -1,7 +1,7 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "project1",
+    "id": "ladera.expandentity",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,12 +12,12 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
-      "version": "1.18.2",
-      "toolsId": "c93e145e-9898-4c58-bcda-668e700e8ed6"
+      "version": "1.18.3",
+      "toolsId": "80da7000-a18d-4824-9ded-fc5a13449435"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/northwind/northwind.svc/",
+        "uri": "/v2/northwind/northwind.svc/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -46,7 +46,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "dependencies": {
-      "minUI5Version": "1.138.0",
+      "minUI5Version": "1.138.1",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {}
@@ -60,12 +60,11 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "project1.i18n.i18n"
+          "bundleName": "ladera.expandentity.i18n.i18n"
         }
       },
       "": {
         "dataSource": "mainService",
-        "type": "sap.ui.model.odata.v2.ODataModel",
         "preload": true,
         "settings": {}
       }
@@ -85,28 +84,28 @@
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
-        "path": "project1.view",
+        "path": "ladera.expandentity.view",
         "async": true,
-        "viewPath": "project1.view"
+        "viewPath": "ladera.expandentity.view"
       },
       "routes": [
         {
-          "name": "RouteEmployeeData",
+          "name": "RouteOrderDetails",
           "pattern": ":?query:",
           "target": [
-            "TargetEmployeeData"
+            "TargetOrderDetails"
           ]
         }
       ],
       "targets": {
-        "TargetEmployeeData": {
-          "id": "EmployeeData",
-          "name": "EmployeeData"
+        "TargetOrderDetails": {
+          "id": "OrderDetails",
+          "name": "OrderDetails"
         }
       }
     },
     "rootView": {
-      "viewName": "project1.view.App",
+      "viewName": "ladera.expandentity.view.App",
       "type": "XML",
       "id": "App",
       "async": true

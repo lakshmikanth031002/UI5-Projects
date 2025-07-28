@@ -1,0 +1,52 @@
+<mvc:View controllerName="loginapplication.controller.LoginPage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+    <Page id="page" title="Royal Enfield">
+    <layout:Splitter height="100%" class="loginContainer" >
+                <VBox class="imagePane">
+                    <Image
+                        src="https://m.media-amazon.com/images/I/71KOO-wWlJL.jpg" 
+                        class="fullHeightImage"/>
+                </VBox>
+                <VBox class="loginPane">
+                    <Panel class="loginForm">
+                        <Title class="tittle"
+                            text="Welcome Back"
+                            level="H2"
+                            titleStyle="H2"
+                            textAlign="Center"/>
+                        <!-- <Text
+                            text="Log in to your account"
+                            class="sapUiSmallMarginBottom"
+                            textAlign="Center"/> -->
+                        <Input
+                            id="usernameInput"
+                            placeholder="Enter username or email"
+                            width="100%"
+                            class="sapUiSmallMarginBottom"/>
+                        <Input
+                            id="passwordInput"
+                            type="Password"
+                            placeholder="Enter password"
+                            width="100%"
+                            class="sapUiSmallMarginBottom"/>
+                        <CheckBox
+                            text="Show Password"
+                            select=".onShowPassword"
+                            class="sapUiSmallMarginBottom"/>
+                        <Button
+                            text="Log In"
+                            type="Emphasized"
+                            width="100%"
+                            press="onLoginPress"
+                            class="sapUiSmallMarginBottom"/>
+                        <Link
+                            text="Forgot Password?"
+                            href="#"
+                            textAlign="Center"/>
+                    </Panel>
+                </VBox>
+    </layout:Splitter>  
+    </Page>
+</mvc:View>

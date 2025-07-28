@@ -1,0 +1,40 @@
+<mvc:View controllerName="ladera.expandentity.controller.OrderDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+         <Table items="{/Orders}">
+        <columns>
+            <Column>
+            <Text text="Order Id"/>
+            </Column>
+             <Column>
+            <Text text="Customer ID"/>
+            </Column>
+             <Column>
+            <Text text="Ship Name"/>
+            </Column>
+             <Column>
+            <Text text="Ship Country"/>
+            </Column>
+             <Column>
+            <Text text="Shipped Date"/>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem>
+        <cells>
+            <Text text="{OrderID}"/>
+            <Text text="{CustomerID}"/>
+            <Text text="{ShipName}"/>
+            <Text text="{ShipCountry}"/>
+            <Text text="{ path: 'ShippedDate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
+
+    </Page>
+</mvc:View>

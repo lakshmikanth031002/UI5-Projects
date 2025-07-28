@@ -1,7 +1,7 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "project1",
+    "id": "loginapplication",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,18 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.18.2",
-      "toolsId": "c93e145e-9898-4c58-bcda-668e700e8ed6"
-    },
-    "dataSources": {
-      "mainService": {
-        "uri": "/northwind/northwind.svc/",
-        "type": "OData",
-        "settings": {
-          "annotations": [],
-          "localUri": "localService/mainService/metadata.xml",
-          "odataVersion": "2.0"
-        }
-      }
+      "toolsId": "a6be57e6-a9ff-45d4-906c-1c353a584301"
     }
   },
   "sap.ui": {
@@ -60,14 +49,12 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "project1.i18n.i18n"
+          "bundleName": "loginapplication.i18n.i18n"
         }
       },
-      "": {
-        "dataSource": "mainService",
-        "type": "sap.ui.model.odata.v2.ODataModel",
-        "preload": true,
-        "settings": {}
+      "Datas" : {
+        "type" : "sap.ui.model.json.JSONModel",
+        "uri" : "model/Data.json"
       }
     },
     "resources": {
@@ -85,28 +72,46 @@
         "transition": "slide",
         "type": "View",
         "viewType": "XML",
-        "path": "project1.view",
+        "path": "loginapplication.view",
         "async": true,
-        "viewPath": "project1.view"
+        "viewPath": "loginapplication.view"
       },
       "routes": [
         {
-          "name": "RouteEmployeeData",
+          "name": "RouteLoginPage",
           "pattern": ":?query:",
           "target": [
-            "TargetEmployeeData"
+            "TargetLoginPage"
           ]
+        },
+        {
+          "name": "RouteMainPage",
+          "pattern": "RouteMainPage",
+          "target": "TargetMainPage"
+        },
+        {
+          "name": "RoutePurchaseOrderCreatePage",
+          "pattern": "RoutePurchaseOrderCreatePage",
+          "target": "TargetPurchaseOrderCreatePage"
         }
       ],
       "targets": {
-        "TargetEmployeeData": {
-          "id": "EmployeeData",
-          "name": "EmployeeData"
+        "TargetLoginPage": {
+          "id": "LoginPage",
+          "name": "LoginPage"
+        },
+        "TargetMainPage": {
+          "id": "MainPage",
+          "name": "MainPage"
+        },
+        "TargetPurchaseOrderCreatePage": {
+          "id": "PurchaseOrderCreate",
+          "name": "PurchaseOrderCreate"
         }
       }
     },
     "rootView": {
-      "viewName": "project1.view.App",
+      "viewName": "loginapplication.view.App",
       "type": "XML",
       "id": "App",
       "async": true
