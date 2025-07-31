@@ -1,0 +1,60 @@
+<mvc:View controllerName="ladera.expandentity.controller.OrderDrillDownItem"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="OrderDrillDownItemPage" 
+          title="Order DrillDown ItemPage"
+          showNavButton="true"
+          navButtonPress="onNavBackOrderDetails">
+
+<Table items="{OrderDrill>/Order_Details/results}">
+        <columns>
+            <Column>
+            <Text text="Order Id"/>
+            </Column>
+            <Column>
+            <Text text="Product Id"/>
+            </Column>
+            <Column>
+            <Text text="Quantity"/>
+            </Column>
+            <Column>
+            <Text text="Unit Price"/>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem>
+        <cells>
+            <Text text="{OrderDrill>OrderID}"/>
+            <Text text="{OrderDrill>ProductID}"/>
+            <Text text="{OrderDrill>Quantity}"/>
+            <Text text="{OrderDrill>UnitPrice}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
+
+ <f:SimpleForm>
+    <f:content>
+    <Title text="Customer Details"/>
+    <Label text="Customer Id"/>
+    <Input value = "{OrderDrill>/CustomerID}"/>
+    <Label text = "Address"/>
+    <Input value = "{OrderDrill>/Customer/Address}" />
+    <Label text = "City"/>
+    <Input value = "{OrderDrill>/Customer/City}" />
+    <Label text = "Company Name"/>
+    <Input value = "{OrderDrill>/Customer/CompanyName}" />
+    <Label text = "Contact Name"/>
+    <Input value = "{OrderDrill>/Customer/ContactName}" />
+    <Label text = "Contact Title"/>
+    <Input value = "{OrderDrill>/Customer/ContactTitle}" />
+    <Label text = "Country"/>
+    <Input value = "{OrderDrill>/Customer/Country}" />
+    </f:content>
+    </f:SimpleForm>
+
+
+
+    </Page>
+</mvc:View>
