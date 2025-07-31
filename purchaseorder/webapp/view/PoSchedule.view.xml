@@ -2,5 +2,48 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="SchedulePage" title="Schedule Line Details">
+        <Table id="ScheduleTable" items="{/SchedulingAgreementScheduleLinesSet}" >
+        <!-- growing="true" growingThreshold="10" -->
+        <columns>
+            <Column>
+            <Text text="Purchasing Document Number"/>   
+            </Column>
+            <Column>
+            <Text text="Item Number"/>   
+            </Column>
+            <Column>
+            <Text text="Schedule Line Number"/>   
+            </Column>
+            <Column>
+            <Text text="Category"/>   
+            </Column>
+            <Column>
+            <Text text="Delivery Date"/>   
+            </Column>
+            <Column>
+            <Text text="Scheduled Quantity"/>   
+            </Column>
+            <Column>
+            <Text text="Delivery Date"/>   
+            </Column>
+            <Column>
+            <Text text="Order Date"/>   
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem>
+        <cells>
+            <Text text="{PoNumber}"/>
+            <Text text="{PoItem}"/>
+            <Text text="{SchedLine}"/>
+            <Text text="{DelDatcatExt}"/>
+            <Text text="{DeliveryDate}"/>
+            <Text text="{Quantity}"/>
+            <Text text="{StatDate}"/>
+            <Text text="{PoDate}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
     </Page>
 </mvc:View>

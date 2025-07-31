@@ -1,6 +1,68 @@
 <mvc:View controllerName="purchaseorder.controller.PoItem"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="HeaderItem" title="Item Details">
+    <Page id="ItemPage" 
+          title="Item Details"
+          showNavButton="true"
+          navButtonPress="onNavBackPOHeaderView">
+        <Table id="ItemTable" items="{oItemJson>/}">
+        <!-- growing="true" growingThreshold="10" -->
+        <columns>
+            <Column>
+            <Text text="Purchasing Document Number"/>   
+            </Column>
+            <Column>
+            <Text text="Item Number"/>   
+            </Column>
+            <Column>
+            <Text text="Short Text"/>   
+            </Column>
+            <Column>
+            <Text text="Material Number"/>   
+            </Column>
+            <!-- <Column>
+            <Text text="Material Number"/>   
+            </Column> -->
+            <Column>
+            <Text text="Plant"/>   
+            </Column>
+            <Column>
+            <Text text="Storage Location"/>   
+            </Column>
+            <Column>
+            <Text text="Material Group"/>   
+            </Column>
+            <!-- <Column>
+            <Text text="Info Record Number"/>   
+            </Column> -->
+            <Column>
+            <Text text="Purchase Order Quantity"/>   
+            </Column>
+            <Column>
+            <Text text="Unit of Measure"/>   
+            </Column>
+            <Column>
+            <Text text="Amount"/>   
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem type="Navigation" press="onNavPOScheduleView">
+        <cells>
+            <Text text="{oItemJson>Ponumber}"/>
+            <Text text="{oItemJson>Poitem}"/>
+            <Text text="{oItemJson>Shorttext}"/>
+            <Text text="{oItemJson>Material}"/>
+            <!-- <Text text="{Ematerial}"/> -->
+            <Text text="{oItemJson>Plant}"/>
+            <Text text="{oItemJson>Stgeloc}"/>
+            <Text text="{oItemJson>Matlgroup}"/>
+            <!-- <Text text="{InfoRec}"/> -->
+            <Text text="{oItemJson>Quantity}"/>
+            <Text text="{oItemJson>Pounit}"/>
+            <Text text="{oItemJson>Netprice}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
     </Page>
 </mvc:View>

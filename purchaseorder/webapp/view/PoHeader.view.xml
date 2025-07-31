@@ -2,21 +2,47 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="HeaderPage" title="Header Details">
-        <Table id="HeaderTable" items="{/PurchasingDocumentHeader}" >
-        <!-- growing="true" growingThreshold="10" -->
+        <Table id="HeaderTable" 
+                items="{/PurchasingDocumentHeaderSet}"
+                growing="true" growingScrollToLoad="true">
+        <!--  growingThreshold="10" -->
+        <headerToolbar>
+            <Toolbar>
+                <Title text="Purchasing Document Number"/>
+                <SearchField width="20%" change="onChangeTable"/>
+                <!-- <ToolbarSpacer/> -->
+                <!-- <Button icon="sap-icon://add" press="onAddMaterialPress"/> -->
+                <Button text="SORT" press="onAddSort"/>
+            </Toolbar>
+        </headerToolbar>
         <columns>
             <Column>
             <Text text="Purchasing Document Number"/>   
             </Column>
              <Column>
-            <Text text="Document Category"/>
-            </Column>
-             <Column>
             <Text text="Company Code"/>
             </Column>
-             <Column>
+            <Column>
+            <Text text="Purchasing Document Type"/>
+            </Column>
+            <!-- <Column>
+            <Text text="Status"/>
+            </Column> -->
+            <!-- <Column>
+            <Text text="Created Date"/>
+            </Column>
+            <Column>
+            <Text text="Created By"/>
+            </Column> -->
+            <!-- <Column>
+            <Text text="Item Number Interval"/>
+            </Column> -->
+            <Column>
             <Text text="Supplier"/>
             </Column>
+            <!-- <Column>
+            <Text text="Terms"/>
+            </Column> -->
             <Column>
             <Text text="Purchasing Organization"/>
             </Column>
@@ -26,17 +52,38 @@
             <Column>
             <Text text="CurrencyKey"/>
             </Column>
+            <!-- <Column>
+            <Text text="Exchange Rate"/>
+            </Column>
+            <Column>
+            <Text text="Document Date"/>
+            </Column>
+            <Column>
+            <Text text="SubItems"/>
+            </Column> -->
         </columns>
         <items>
         <ColumnListItem type="Navigation" press="onNavPOItemView">
         <cells>
-            <Text text="{PurchasingDocumentNumber}"/>
-            <Text text="{DocumentCategory}"/>
-            <Text text="{CompanyCode}"/>
-            <Text text="{Supplier}"/>
-            <Text text="{PurchasingOrganization}"/>
-            <Text text="{PurchasingGroup}"/>
-            <Text text="{CurrencyKey}"/>
+            <Text text="{Ponumber}"/>
+            <Text text="{Compcode}"/>
+            <Text text="{Doctype}"/>
+            <!-- <Text text="{Status}"/> -->
+            <!-- <Text text="{ path: 'CreatDate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
+            <Text text="{CreatedBy}"/> -->
+            <!-- <Text text="{ItemIntvl}"/> -->
+            <Text text="{Vendor}"/>
+            <!-- <Text text="{Pmnttrms}"/> -->
+            <Text text="{Purchorg}"/>
+            <Text text="{Purgroup}"/>
+            <Text text="{Currency}"/>
+            <!-- <Text text="{ExchRate}"/> -->
+            <!-- <Text text="{path: 'DocDate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
+            <Text text="{Subitemint}"/> -->
         </cells>
         </ColumnListItem>
         </items>              
