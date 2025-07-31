@@ -1,0 +1,6 @@
+<mvc:View controllerName="purchaseorder.controller.PoItem"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="HeaderItem" title="Item Details">
+    </Page>
+</mvc:View>

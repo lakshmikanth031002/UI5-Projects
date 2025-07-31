@@ -1,0 +1,45 @@
+<mvc:View controllerName="purchaseorder.controller.PoHeader"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="HeaderPage" title="Header Details">
+        <Table id="HeaderTable" items="{/PurchasingDocumentHeader}" >
+        <!-- growing="true" growingThreshold="10" -->
+        <columns>
+            <Column>
+            <Text text="Purchasing Document Number"/>   
+            </Column>
+             <Column>
+            <Text text="Document Category"/>
+            </Column>
+             <Column>
+            <Text text="Company Code"/>
+            </Column>
+             <Column>
+            <Text text="Supplier"/>
+            </Column>
+            <Column>
+            <Text text="Purchasing Organization"/>
+            </Column>
+            <Column>
+            <Text text="Purchasing Group"/>
+            </Column>
+            <Column>
+            <Text text="CurrencyKey"/>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem type="Navigation" press="onNavPOItemView">
+        <cells>
+            <Text text="{PurchasingDocumentNumber}"/>
+            <Text text="{DocumentCategory}"/>
+            <Text text="{CompanyCode}"/>
+            <Text text="{Supplier}"/>
+            <Text text="{PurchasingOrganization}"/>
+            <Text text="{PurchasingGroup}"/>
+            <Text text="{CurrencyKey}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
+    </Page>
+</mvc:View>

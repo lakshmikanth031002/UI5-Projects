@@ -1,0 +1,6 @@
+<mvc:View controllerName="purchaseorder.controller.PoSchedule"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="SchedulePage" title="Schedule Line Details">
+    </Page>
+</mvc:View>

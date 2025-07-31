@@ -1,0 +1,51 @@
+<mvc:View controllerName="podetails.controller.PurchaseOrderItem"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="POItemPage"
+          title="Purchase Order Item Details"
+          showNavButton="true"
+          navButtonPress="onNavBackPOItemView">
+         <Table id="ItemTable" items="{oItemJson>/}">
+        <columns>
+            <Column>
+            <Text text="Purchasing Document Number"/>
+            </Column>
+             <Column>
+            <Text text="Item Number"/>
+            </Column>
+             <Column>
+            <Text text="Material"/>
+            </Column>
+             <Column>
+            <Text text="Plant"/>
+            </Column>
+            <Column>
+            <Text text="Storage Location"/>
+            </Column>
+            <Column>
+            <Text text="Purchase Order Quantity"/>
+            </Column>
+            <Column>
+            <Text text="Net Price"/>
+            </Column>
+            <Column>
+            <Text text="Base UnitofMeasure"/>
+            </Column>
+        </columns>
+        <items>
+        <ColumnListItem>
+        <cells>
+            <Text text="{oItemJson>PurchasingDocumentNumber}"/>
+            <Text text="{oItemJson>ItemNumber}"/>
+            <Text text="{oItemJson>Material}"/>
+            <Text text="{oItemJson>Plant}"/>
+            <Text text="{oItemJson>StorageLocation}"/>
+            <Text text="{oItemJson>PurchaseOrderQuantity}"/>
+            <Text text="{oItemJson>NetPrice}"/>
+            <Text text="{oItemJson>BaseUnitofMeasure}"/>
+        </cells>
+        </ColumnListItem>
+        </items>              
+        </Table>
+    </Page>
+</mvc:View>
