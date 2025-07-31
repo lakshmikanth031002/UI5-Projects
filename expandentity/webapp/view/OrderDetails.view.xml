@@ -1,9 +1,9 @@
 <mvc:View controllerName="ladera.expandentity.controller.OrderDetails"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="OrderDetailsPage" title="{i18n>title}">
 
-         <Table items="{/Orders}">
+    <Table items="{/Orders}">
         <columns>
             <Column>
             <Text text="Order Id"/>
@@ -22,7 +22,7 @@
             </Column>
         </columns>
         <items>
-        <ColumnListItem>
+        <ColumnListItem type="Navigation" press="onNavOrderItemView">
         <cells>
             <Text text="{OrderID}"/>
             <Text text="{CustomerID}"/>
@@ -35,6 +35,5 @@
         </ColumnListItem>
         </items>              
         </Table>
-
-    </Page>
+    </Page>s
 </mvc:View>

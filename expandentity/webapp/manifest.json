@@ -95,12 +95,23 @@
           "target": [
             "TargetOrderDetails"
           ]
+        },
+        {
+          "name": "RouteOrderDrillDownItem",
+          "pattern": "RouteOrderDrillDownItem/{OrderId}",
+          "target": [
+            "TargetOrderDrillDownItem"
+          ]
         }
       ],
       "targets": {
         "TargetOrderDetails": {
-          "id": "OrderDetails",
+          "id": "OrderDetailsPage",
           "name": "OrderDetails"
+        },
+        "TargetOrderDrillDownItem": {
+          "id": "OrderDrillDownItemPage",
+          "name": "OrderDrillDownItem"
         }
       }
     },
