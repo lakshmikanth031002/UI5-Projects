@@ -1,0 +1,42 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+<Dialog title="Create Purchae Order">
+    <f:SimpleForm>
+        <f:content>
+                <Label text="Company Code" required="true"/>
+                <Input id="CCInput" value="RE01" placeholder="Enter Company Code"/>
+                <Label text="Document Type" required="true"/>
+                <Input id="DTInput" value="NB" placeholder="Enter Document Type"/>
+                <Label text="Supplier" required="true"/>
+                <Input id="SUInput" value="0000001001" placeholder="Enter Supplier"/>
+                <Label text="Purchase Organization" required="true"/>
+                <Input id="POInput" value="RE01" placeholder="Enter Purchase Organization"/>
+                <Label text="Purchasing Group" required="true"/>
+                <Input id="PGInput" value="001" placeholder="Enter Purchasing Group"/>
+                <Label text="Currency" required="true"/>
+                <Input id="CUInput" value="INR" placeholder="Enter Currency"/>
+                <!-- Item Details -->
+                <Label text="Item Number" required="true"/>
+                <Input id="INInput" value="00010" placeholder="Enter Item Number"/>
+                <Label text="Material" required="true"/>
+                <Input id="MAInput" value="000000000000100013" placeholder="Enter Material"/>
+                <Label text="Plant" required="true"/>
+                <Input id="PInput" value="RE01" placeholder="Enter Plant"/>
+                <Label text="Storage Location" required="true"/>
+                <Input id="SLInput" value="0001" placeholder="Enter Storage Location"/>
+                <Label text="Quantity" required="true"/>
+                <Input id="QInput" value="44" type="Number" placeholder="Enter Quantity"/>
+                <Label text="PO Unit" required="true"/>
+                <Input id="PUInput" value="EA" placeholder="Enter PO Unit"/>
+                <Label text="Net Price" required="true"/>
+                <Input id="NPInput" value="100" type="Number" placeholder="Enter Net Price"/>
+        </f:content>
+    </f:SimpleForm>
+    <beginButton>
+        <Button text="Save" press="onSavePO"/>
+    </beginButton>
+    <endButton>
+    <Button text="Cancel" press="onCancelPO"/>
+    </endButton>
+</Dialog>
+</core:FragmentDefinition>
+ 

@@ -8,6 +8,7 @@ sap.ui.define([
         onInit() {
             sap.ui.core.UIComponent.getRouterFor(this).getRoute("RoutePoItem").attachPatternMatched(this._objPatternMatched,this);
         },
+        
 // Get PO Number 
         _objPatternMatched:function(oEvent){
             var that = this;
@@ -34,6 +35,18 @@ sap.ui.define([
             })
            
         },
+
+
+// Navigation to Schedule view
+
+    onNavPOScheduleView: function(oEvent){
+        var SelectedPONumber = oEvent.getSource().getBindingContext("oItemJson").getProperty("Ponumber");
+        var SelectedPOItemNumber = oEvent.getSource().getBindingContext("oItemJson").getProperty("Poitem");
+        var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        oRouter.navTo("RoutePoSchedule", {
+            "PONumber" : SelectedPONumber,
+            "POItemNumber" : SelectedPOItemNumber});
+    },
 
 // Navigation Back to Header View
 

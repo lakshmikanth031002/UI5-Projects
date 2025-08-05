@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="purchaseorder.controller.POMain"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page title="Purchase Order Management">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Button text="Create PO" press="onCreatePO" />
+                <Button text="Display PO" press="onDisplayPO" />
+                <Button text="Update PO" press="onUpdatePO" />
+                <Button text="Delete PO" press="onDeletePO" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

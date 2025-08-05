@@ -104,7 +104,7 @@
         },
         {
           "name": "RoutePoSchedule",
-          "pattern": "RoutePoSchedule/{PONumber}{POItemNumber}",
+          "pattern": "RoutePoSchedule/{PONumber}/{POItemNumber}",
           "target":
             "TargetPoSchedule"
         }

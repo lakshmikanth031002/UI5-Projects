@@ -1,6 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], (Controller) => {
+    "sap/ui/core/mvc/Controller",
+    "sap/m/MessageBox"
+], (Controller,MessageBox) => {
     "use strict";
 
     return Controller.extend("purchaseorder.controller.PoSchedule", {
@@ -11,20 +12,22 @@ sap.ui.define([
 _objPatternMatched:function(oEvent){
     var that = this;
     var passedPONumber = oEvent.getParameter("arguments").PONumber;
+    var passedPOItemNumber = oEvent.getParameter("arguments").POItemNumber;
     var oBusyDialog = new sap.m.BusyDialog({
         title: "Loading Data",
         text: "Please Wait...",
         customIcon: "./css/loading.png"
     })
     oBusyDialog.open();
-    this.getOwnerComponent().getModel().read("/PurchasingDocumentHeaderSet",{
+    this.getOwnerComponent().getModel().read("/PurchasingDocumentItemSet",{
         urlParameters:{
-            "$expand":"Nav_HeaderToItem"
+            "$expand":"Nav_ItemToSchedule"
         },
-        filters:[new sap.ui.model.Filter("PoNumber","EQ","000"+passedPONumber)],
+        filters:[new sap.ui.model.Filter("Ponumber","EQ","000"+passedPONumber),
+                 new sap.ui.model.Filter("Poitem", "EQ",passedPOItemNumber)],
         success:function(odata,results){
-        var ItemModel = new sap.ui.model.json.JSONModel([odata.results[0].Nav_HeaderToItem.results[0]]);
-        that.getView().byId("ItemTable").setModel(ItemModel,"oItemJson");
+        var ScheduleModel = new sap.ui.model.json.JSONModel([odata.results[0].Nav_ItemToSchedule.results[0]]);
+        that.getView().byId("ScheduleTable").setModel(ScheduleModel,"oScheduleJson");
         oBusyDialog.close();
         },
         error:function(oError){

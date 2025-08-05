@@ -2,7 +2,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="SchedulePage" title="Schedule Line Details">
-        <Table id="ScheduleTable" items="{/SchedulingAgreementScheduleLinesSet}" >
+        <Table id="ScheduleTable" items="{oScheduleJson>/}" >
         <!-- growing="true" growingThreshold="10" -->
         <columns>
             <Column>
@@ -33,14 +33,20 @@
         <items>
         <ColumnListItem>
         <cells>
-            <Text text="{PoNumber}"/>
-            <Text text="{PoItem}"/>
-            <Text text="{SchedLine}"/>
-            <Text text="{DelDatcatExt}"/>
-            <Text text="{DeliveryDate}"/>
-            <Text text="{Quantity}"/>
-            <Text text="{StatDate}"/>
-            <Text text="{PoDate}"/>
+            <Text text="{oScheduleJson>Ponumber}"/>
+            <Text text="{oScheduleJson>Poitem}"/>
+            <Text text="{oScheduleJson>Schedline}"/>
+            <Text text="{oScheduleJson>Deldatcatext}"/>
+            <Text text="{ path : 'oScheduleJson>Deliverydate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
+            <Text text="{oScheduleJson>Quantity}"/>
+            <Text text="{path: 'oScheduleJson>Statdate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
+            <Text text="{path: 'oScheduleJson>Podate',
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: { pattern : 'dd/mm/yyyy'}}"/>
         </cells>
         </ColumnListItem>
         </items>              
