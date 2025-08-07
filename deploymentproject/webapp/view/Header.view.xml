@@ -1,0 +1,9 @@
+<mvc:View controllerName="ladera.deploymentproject.controller.Header"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="Purchase Order Header">
+        <Label text="Purchase Order Number"/>
+        <Input id="ponumber" value="" placeholder="Enter PO number" width="20px"/>
+        <Button text="Submit" press="NavigationToView"/>
+    </Page>
+</mvc:View>

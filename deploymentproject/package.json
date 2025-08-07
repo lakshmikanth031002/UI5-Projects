@@ -1,5 +1,5 @@
 {
-  "name": "newassessment",
+  "name": "deploymentproject",
   "version": "0.0.1",
   "description": "An SAP Fiori application.",
   "keywords": [
@@ -22,13 +22,13 @@
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
     "deploy": "fiori cfDeploy",
     "deploy-config": "fiori add deploy-config",
-    "start-noflp": "fiori run --open \"index.html?sap-ui-xx-viewCache=false\"",
+    "start-noflp": "fiori run --open \"/index.html?sap-ui-xx-viewCache=false\"",
     "int-test": "fiori run --open 'test/integration/opaTests.qunit.html'",
-    "start-variants-management": "fiori run --open \"preview.html#app-preview\"",
+    "start-variants-management": "fiori run --open \"/preview.html#app-preview\"",
     "unit-test": "fiori run --open 'test/unit/unitTests.qunit.html'",
     "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo",
     "build:mta": "rimraf resources mta_archives && mbt build",
-    "undeploy": "cf undeploy newassessment --delete-services --delete-service-keys --delete-service-brokers"
+    "undeploy": "cf undeploy laderadeploymentproject --delete-services --delete-service-keys --delete-service-brokers"
   },
   "sapuxLayer": "CUSTOMER_BASE"
 }
